@@ -1,0 +1,117 @@
+|somador8bits
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+cin => cin.IN1
+s[0] <= somadorUnico:s1.s
+s[1] <= somadorUnico:s2.s
+s[2] <= somadorUnico:s3.s
+s[3] <= somadorUnico:s4.s
+s[4] <= somadorUnico:s5.s
+s[5] <= somadorUnico:s6.s
+s[6] <= somadorUnico:s7.s
+s[7] <= somadorUnico:s8.s
+cout <= somadorUnico:s8.cout
+
+
+|somador8bits|somadorUnico:s1
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|somadorUnico:s2
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|somadorUnico:s3
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|somadorUnico:s4
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|somadorUnico:s5
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|somadorUnico:s6
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|somadorUnico:s7
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|somador8bits|somadorUnico:s8
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
