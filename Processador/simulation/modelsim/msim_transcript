@@ -1,0 +1,96 @@
+# Reading pref.tcl
+# do tarefa2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador {C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/processor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:40:27 on Jun 04,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador" C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/processor.v 
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# End time: 01:40:27 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador {C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/multiplexador.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:40:27 on Jun 04,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador" C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/multiplexador.v 
+# -- Compiling module multiplexador
+# 
+# Top level modules:
+# 	multiplexador
+# End time: 01:40:27 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador {C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/ula.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:40:27 on Jun 04,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador" C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/ula.v 
+# -- Compiling module ula
+# 
+# Top level modules:
+# 	ula
+# End time: 01:40:28 on Jun 04,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador {C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/counter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:40:28 on Jun 04,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador" C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/counter.v 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 01:40:28 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador {C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/registrador.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:40:28 on Jun 04,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador" C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/registrador.v 
+# -- Compiling module registrador
+# 
+# Top level modules:
+# 	registrador
+# End time: 01:40:28 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador {C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/testbench.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:40:28 on Jun 04,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador" C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/testbench.v 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 01:40:28 on Jun 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.testbench
+# vsim work.testbench 
+# Start time: 01:40:38 on Jun 04,2024
+# Loading work.testbench
+# Loading work.processor
+# Loading work.registrador
+# Loading work.ula
+# Loading work.counter
+# Loading work.multiplexador
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (10) for port 'imediato'. The port definition is at: C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/multiplexador.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/p/m1 File: C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/processor.v Line: 34
+add wave -position end  sim:/testbench/cout
+add wave -position end  sim:/testbench/bus
+add wave -position end  sim:/testbench/iin
+add wave -position end  sim:/testbench/clock
+add wave -position end sim:/testbench/p/*
+run
+# ** Note: $finish    : C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/testbench.v(34)
+#    Time: 72 ps  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/testbench.v line 34
+# End time: 01:44:10 on Jun 04,2024, Elapsed time: 0:03:32
+# Errors: 0, Warnings: 1

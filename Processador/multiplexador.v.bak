@@ -1,0 +1,66 @@
+
+
+module multiplexador (switch, in, out);
+	
+	input [7:0] in;
+	input [2:0] switch;
+	output out;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//	wire w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, na, nb, nc;
+//	
+//	
+//	// criando as chaves negadas
+//	not n1 (na, a);
+//	not n2 (nb, b);
+//	not n3 (nc, c);
+//	
+//	// verificando as duas primeiras chaves do multiplexador
+//	and e00 (w1, na, nb);
+//	and e01 (w2, na, b);
+//	and e10 (w3, a, nb);
+//	and e11 (w4, a, b);
+//
+//	// verificando a terceira chave do multiplexador
+//	and e000 (w5, w1, nc);
+//	and e001 (w6, w1, c);
+//	and e010 (w7, w2, nc);
+//	and e100 (w8, w3, nc);
+//	and e101 (w9, w3, c);
+//	and e111 (w10, w4, c);
+//	
+	
+	
+	
+
+
+endmodule
