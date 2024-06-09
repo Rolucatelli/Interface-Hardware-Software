@@ -56,7 +56,6 @@ set_global_assignment -name VERILOG_FILE multiplexador.v
 set_global_assignment -name VERILOG_FILE ula.v
 set_global_assignment -name VERILOG_FILE counter.v
 set_global_assignment -name VERILOG_FILE registrador.v
-set_global_assignment -name VERILOG_FILE demultiplexador.v
 set_global_assignment -name VERILOG_FILE testbench.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top

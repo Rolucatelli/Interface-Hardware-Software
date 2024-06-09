@@ -4,7 +4,6 @@ source_file = 1, C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/P
 source_file = 1, C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/ula.v
 source_file = 1, C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/counter.v
 source_file = 1, C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/registrador.v
-source_file = 1, C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/demultiplexador.v
 source_file = 1, C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/testbench.v
 source_file = 1, C:/Users/Rodrigo/Documents/GitHub/Interface-Hardware-Software/Processador/db/tarefa2.cbx.xml
 design_name = testbench

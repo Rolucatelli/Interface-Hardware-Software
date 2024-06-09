@@ -8,7 +8,7 @@ module counter (clock, clear, out);
 	
 	always @(posedge clock) begin
 	
-		if(clear == 0)
+		if(clear == 1)
 			out <= 2'b00;
 		else
 			out <= out + 1'b1;

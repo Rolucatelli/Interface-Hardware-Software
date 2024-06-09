@@ -17,7 +17,7 @@ module testbench (cout);
 	processor p(clock, iin, resetn, bus);
 	
 	initial begin
-		# 0 resetn = 1'b0;
+		# 1 resetn = 1'b0;
 //		# 8 iin = 16'b1010000000011100;
 //		# 8 iin = 16'b1010010000001010;
 //		# 8 iin = 16'b0010000010000000;
