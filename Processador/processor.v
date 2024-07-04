@@ -1,18 +1,22 @@
 
 
 
-module processor (clock, iin, resetn, bus);
-	input [15:0] iin;
+module processor (clock, mem, resetn, bus);
+	input [63:0] [15:0] mem;
 	input resetn, clock;
 	output reg [15:0] bus;
 
 	parameter LDI = 3'b101;
 	parameter OUT = 3'b100;
 	parameter REP = 3'b111;
+	parameter BNE = 3'b110;
 	
 	wire [15:0] outMulti, outR0, outR1, outR2, outR3, outR4, outR5, outR6, outR7, outRA, outRR, outULA;
 	reg r0e, r1e, r2e, r3e, r4e, r5e, r6e, r7e, rAe, rRe, immeSelect, rSelect, clearCont;
 	wire [1:0] cont;
+	wire [5:0] jmp, ic;
+	// reg [5:0] ic;
+	
 	
 	reg [2:0] opcode, op;
 	
@@ -31,18 +35,22 @@ module processor (clock, iin, resetn, bus);
 	ula u1 (.rA(outRA), .b(outMulti), .opSelect(opcode), .rG(outULA));
 	
 	counter c1 (.clock(clock), .clear(clearCont), .out(cont));
+
+	pc p1 (.mem(mem), .cont(cont), .ic(ic), .jmp(jmp));
 	
 	multiplexador m1 (.i0(outR0), .i1(outR1), .i2(outR2), .i3(outR3), .i4(outR4), .i5(outR5), .i6(outR6), .i7(outR7), .iR(outRR), 
-						.imediato(iin[9:0]), .rSelect(rSelect), .immeSelect(immeSelect), .select(op), .out(outMulti));
+						.imediato(mem[ic][9:0]), .rSelect(rSelect), .immeSelect(immeSelect), .select(op), .out(outMulti));
 						
 	initial begin
 		# 0 clearCont = 1;
+		jmp = 0;
 	end
 
 	
 	always @(cont, resetn) begin
 		case (cont)
 			2'b00: begin
+				jmp = 0;
 				clearCont = resetn;
 				r0e = 0;
 				r1e = 0;
@@ -54,8 +62,8 @@ module processor (clock, iin, resetn, bus);
 				r7e = 0;
 				rSelect = 0;
 				immeSelect = 0;
-				opcode = iin[15:13];
-				op = iin[12:10];
+				opcode = mem[ic][15:13];
+				op = mem[ic][12:10];
 			end
 			2'b01: begin
 				rAe = 1;
@@ -68,15 +76,18 @@ module processor (clock, iin, resetn, bus);
 				end
 				else if (opcode[2] == 0) 
 					begin 
-						op = iin[09:07]; 
+						op = mem[ic][09:07]; 
 						rRe = 1; 
 					end
-				else if (opcode == REP) op = iin[09:07];
+				else if (opcode == REP) op = mem[ic][09:07];
 			end
 			2'b11: begin
 				rRe = 0;
 				rSelect = 1;
-				case (iin[12:10])
+				if (opcode == BNE) begin
+					if (outMulti == 0) jmp = mem[ic][9:0];
+				end
+				case (mem[ic][12:10])
 					3'b000: r0e = 1;
 					3'b001: r1e = 1;
 					3'b010: r2e = 1;
