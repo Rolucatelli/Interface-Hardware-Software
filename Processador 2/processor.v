@@ -90,6 +90,7 @@ module processor (clock, bus, exit);
 				end
 				// Se a instrução for OUT, o barramento é atualizado
 				else if (outMem[15:13] == OUT) bus = outMulti;
+				// Se a instrução for HLT, o programa é encerrado
 				else if (outMem[15:13] == HLT) exit = 1;
 				// Caso contrário, escrevemos no registrador selecionado
 				else begin
