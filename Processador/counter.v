@@ -2,6 +2,7 @@
 
 
 module counter (clock, clear, out);
+	// 4-bit counter
 
 	input clock, clear;
 	output reg [1:0] out;
